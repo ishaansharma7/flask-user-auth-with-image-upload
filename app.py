@@ -133,8 +133,12 @@ def upload_profile_details():
 
 @app.route('/get-image/<filename>', methods=['GET'])
 def get_image(filename):
-    filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-    return send_file(filename, mimetype='image/gif')
+    try:
+        filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        return send_file(filename, mimetype='image/gif')
+    except Exception:
+        traceback.print_exc()
+        return 'unable to fetch user profile pic'
 
 
 
