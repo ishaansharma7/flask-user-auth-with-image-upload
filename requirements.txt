@@ -1,0 +1,14 @@
+bcrypt
+cffi
+Click
+Flask
+Flask-JWT-Extended
+Flask-SQLAlchemy
+itsdangerous
+Jinja2
+MarkupSafe
+pycparser
+PyJWT
+six
+SQLAlchemy
+Werkzeug
